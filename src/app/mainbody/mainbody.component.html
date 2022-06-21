@@ -1,0 +1,39 @@
+<p>
+    <mat-toolbar color="primary">
+        <span>Angular Final Project</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button color="warn" class="example-button-row" (click)="openDialog()">Add New User</button>
+    </mat-toolbar>
+</p>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of getArray; let i=index; ">
+        <td>{{item.fields['First Name']}}</td>
+        <td>{{item.fields['Last Name']}}</td>
+        <td>{{item.fields['Date of Birth']}}</td>
+        <td>{{item.fields['Gender']}}</td>
+        <td>{{item.fields['Status']}}</td>
+        <td><button class="btn btn-secondary edit" (click)="editData(item)">Edit</button>
+            <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+        </td>
+
+    </tr>
+    <tr *ngFor = "let item of jArray ; let i=index">
+        <td>{{item.first_name}}</td>
+        <td>{{item.last_name}}</td>
+        <td>{{item.data_of_birth}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.status}}</td>
+        <td><button class="btn btn-secondary edit" (click)="editData(item)">Edit</button>
+            <button class="btn btn-danger"  (click)="jDelete(item.id) ">Delete</button>
+        </td>
+    </tr>
+</table>

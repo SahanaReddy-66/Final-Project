@@ -1,0 +1,15 @@
+{
+  "post": [
+    {
+      "first_name": " sahana",
+      "last_name": " reddy",
+      "data_of_birth": "2022-06-20",
+      "gender": "Female",
+      "status": "Active",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

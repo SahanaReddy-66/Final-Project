@@ -1,0 +1,30 @@
+<!-- <h2>Add User Form</h2> -->
+<form [formGroup]="updateform">
+    <label for="">First Name * </label>
+    <input type="text" formControlName="first_name">
+    <br><br>
+    <label for="">Last Name * </label>
+    <input type="text" formControlName="last_name">
+    <br><br>
+    <label for="">Date of Birth </label>
+    <input type="date" formControlName="data_of_birth">
+    <br><br>
+    <label for="">Gender</label>
+    <input type="radio" value="Male" name="gender" formControlName="gender">
+    <span>Male</span>
+    <input type="radio" value="Female" name="gender" formControlName="gender">
+    <span>Female</span>
+    <input type="radio" value="Not Specified" name="gender" formControlName="gender">
+    <span> Not Specified</span>
+    <br><br>
+    <label for="">Status</label>
+    <input type="radio" value="Active" name="status" formControlName="status">
+    <span>Active</span>
+    <input type="radio" value="Suspended" name="status" formControlName="status">
+    <span>Suspended</span>
+    <div class="example-button-row Lbutton">
+        <button mat-raised-button color="warn" class="close" mat-dialog-close>Close</button>
+        <button mat-raised-button color="primary" (click)="addData()">{{button}}</button>
+
+    </div>
+</form>
